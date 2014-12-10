@@ -1,0 +1,71 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
+    <!-- <meta http-equiv="refresh" content="15;url=index.html"> -->
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/table.css" rel="stylesheet"/>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/spin.min.js" type="text/javascript"></script>
+    <script src="js/translator.js" type="text/javascript"></script>
+    <script src="js/ProductsFinder.js" type="text/javascript"></script>
+    <script src="lang/words.js" type="text/javascript"></script>
+</head>
+<body onload="
+        saveToSessionStorage('product', findProduct('codeTbd'));
+        saveToSessionStorage('page', '004enterClientInfo.html');
+        translate(['enter_phone_to_proceed', 'btnHome', 'btnSubmitCellPhoneNumber']);">
+
+
+<div id="page" class="table fullScreen">
+    <div class="tableRow headerFontStyle background" style="height: 25%;">
+        <div class="tableCell">
+            <div class="table" style="width: 100%;">
+                <div class="tableRow">
+                    <div class="tableCellStepHeader middleCenterContainer">
+                        <span id="enter_phone_to_proceed">!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tableRow bodyFontStyle" style="height: 60%;">
+        <div id="spinnerPlace" class="tableCell">
+
+
+            <div class="table" style="width: 100%;">
+                <div class="tableRow">
+                    <div class="tableCell middleRightContainer leftPart"
+                         style="background-size: 100%; background: url(images/enterCellPhone.jpg) no-repeat center ;">
+                    </div>
+                    <div class="tableCell middleCenterContainer">
+                        <input id="txtCellPhoneNumber" type="text" class="inputField" value="+38(097)658-9559"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tableRow">
+        <div class="tableCell">
+            <div class="table" style="width: 100%;">
+                <div class="tableRow">
+                    <div class="tableCell middleLeftContainer">
+                        <button type="button" id="btnHome" style="width: 30%;"
+                                onclick="redirectToPage('000home.html');">
+                        </button>
+                    </div>
+                    <div class="tableCell middleRightContainer" style="width: 50%;">
+                        <button type="button" id="btnSubmitCellPhoneNumber"
+                                onclick="runSpinnerWithRedirect('spinnerPlace','005thankYou.html');">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

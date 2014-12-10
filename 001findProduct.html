@@ -1,0 +1,71 @@
+﻿<!--fint size http://css-tricks.com/rems-ems/-->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
+    <!-- <meta http-equiv="refresh" content="15;url=index.html"> -->
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/table.css" rel="stylesheet"/>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/spin.min.js" type="text/javascript"></script>
+    <script src="js/translator.js" type="text/javascript"></script>
+    <script src="js/ProductsFinder.js" type="text/javascript"></script>
+    <script src="lang/words.js" type="text/javascript"></script>
+</head>
+<body onload="
+        saveToSessionStorage('product', findProduct('codeTbd'));
+        saveToSessionStorage('page', '001scanTheProduct.html');
+        translate(['input','scan_the_product', 'search_the_product',
+        'product_code_short', 'btnHome', 'btnFindProductById']);">
+
+<div id="page" class="table fullScreen">
+    <div class="tableRow headerFontStyle background" style="height: 25%;">
+        <div class="tableCell">
+            <div class="table" style="width: 100%;">
+                <div class="tableRow">
+                    <div class="tableCellStepHeader middleCenterContainer">
+                        <span id="search_the_product"> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tableRow bodyFontStyle" style="height: 60%;">
+        <div class="tableCell">
+            <div class="table" style="width: 100%;">
+                <div class="tableRow">
+                    <div class="tableCell middleRightContainer leftPart"
+                         style="background-size: 100%; background: url(images/scanTheProduct.jpg) no-repeat center ;">
+                    </div>
+                    <div id="spinnerPlace" class="tableCell middleCenterContainer">
+                        <span id="product_code_short"></span>
+                        <input id="txtProductCode" type="text" class="inputField" value="0000912"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tableRow">
+        <div class="tableCell">
+            <div class="table" style="width: 100%;">
+                <div class="tableRow">
+                    <div class="tableCell middleLeftContainer">
+                        <button type="button" id="btnHome" style="width: 50%;"
+                                onclick="redirectToPage('000home.html');">
+                        </button>
+                    </div>
+                    <div class="tableCell middleRightContainer">
+                        <button type="button" id="btnFindProductById"
+                                onclick="runSpinnerWithRedirect('spinnerPlace','002start.html');">
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

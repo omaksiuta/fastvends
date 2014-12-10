@@ -1,0 +1,240 @@
+﻿@charset "utf-8";
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-align: center;
+    /*font-weight: bold;*/
+    min-height: 480px;
+
+}
+
+.section_name {
+    margin-top: 1%;
+    margin-bottom: 1%;
+    color: orangered;
+    font-size: 400%;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: normal;
+    /*text-transform: uppercase;*/
+    font-family: 'Chelsea Market', Georgia, serif;
+}
+#section_contacts{
+    color: #ADD9FA;
+}
+
+.product_big_logo {
+    width: 9%;
+    height: 200px;
+    min-width: 120px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 150%;
+    padding: 0.5%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    display: inline-block;
+    color: orangered;
+    border: 15px solid #455A64;
+    /*border-radius: 15px;*/
+    background-color: #ffffff;
+}
+
+.product_big_logo:hover {
+    border: 15px solid orangered;
+    color: #455A64;
+}
+
+.price_graph {
+    /*border: 1px solid #455A64;*/
+    /*border-radius: 15px;*/
+    min-width: 200px;
+    width: 50%;
+    text-align: center;
+    display: inline-block;
+    /*background-color: #ffffff;*/
+    padding: 0.5%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+}
+
+#priceName {
+    font-size: 150%;
+    color: #455A64;
+    font-weight: bold;
+
+}
+
+#priceCost {
+    /*display: inline-block;*/
+    /*border: 1px solid #455A64;*/
+    padding: 1%;
+    font-size: 150%;
+    color: #ffffff;
+    background-color: #455A64;
+    min-height: 35px;
+    /*vertical-align: middle;*/
+    text-align: right;
+    /*font-weight: bold;*/
+
+}
+
+#priceCost:hover {
+    background-color: #ADD9FA;
+    color: #455A64;
+}
+
+#about {
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#products {
+    background-color: #ADD9FA;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#pricing {
+
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#behaviour {
+    background-color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#equipment {
+    background-color: #ADD9FA;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#security {
+    background-color: #ADD9FA;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+#contacts {
+    background-color: #455A64;
+    color: #ADD9FA;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+}
+
+.slogan {
+    font-size: 150%;
+    min-height: 30px;
+    width: 100%;
+    display: inline-block;
+    font-weight: normal;
+
+}
+
+#sloganAfterAbout, #sloganAfterProducts, #sloganAfterPricing, #sloganAfterBehaviour, #sloganAfterEquipment, #sloganAfterSecurity {
+    background-color: orangered;
+    color: #ffffff;
+}
+
+.connect .bigImgLink {
+    display: inline-block;
+}
+
+.connect .bigImgLink img {
+    height: 50px;
+    width: 50px;
+}
+
+#company_name {
+    font-size: 350%;
+    color: #455A64;
+}
+
+#aboutText, #behaviourText, #equipmentText, #securityText, #contactsText {
+    font-size: 150%;
+    line-height: 35px;
+    font-weight: normal;
+    color: #455A64;
+}
+
+#contactsText {
+
+    color: #ADD9FA;
+}
+
+/*Preview*/
+.ui-state-default, .ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default {
+    /*position: absolute;*/
+    height: 50px;
+    width: 50px;
+    border-radius: 60%;
+    color: #FFFFFF;
+    background-color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 18px;
+    text-shadow: 0 1px 0 #ffffff;
+    margin-left: 94%;
+    /*opacity: 0.2;*/
+}
+
+.ui-state-hover, .ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content,
+.ui-state-focus, .ui-widget-header, .ui-state-focus {
+    /*color: #4b4b4b;*/
+    /*opacity: 0.4;*/
+    cursor: pointer;
+}
+
+#logoImage {
+    width: 50%;
+    min-width: 340px;
+    max-width: 640px;
+    min-height: 220px;
+    max-height: 640px;
+    vertical-align: top;
+    text-align: center;
+    /*border: 5px solid blue;*/
+}
+
+#tabletImage, #wifiImage, #smsImage {
+    min-width: 200px;
+    max-width: 300px;
+    height: 200px;
+    vertical-align: top;
+    text-align: center;
+}
+
+#copyright {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    color: #455A64;
+}
+
+.socialImgLink {
+    min-height: 25px;
+    max-height: 50px;
+    min-width: 25px;
+    max-width: 50px;
+
+}
+

@@ -1,0 +1,73 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.table /*http://stackoverflow.com/questions/10509675/create-table-layout-using-div-with-width-height-as-percentages*/                                     {
+    height: 100%;
+    display: table;
+}
+
+.tableRow {
+    display: table-row;
+}
+
+.leftPart {
+    width: 30%;
+}
+
+.rightPart {
+    width: 70%;
+}
+
+.tableCell {
+    /*border: 2px solid blue;*/
+    display: table-cell;
+
+}
+
+.topCenterContainer {
+    vertical-align: top;
+    text-align: center;
+}
+
+.middleCenterContainer {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.topLeftContainer {
+    vertical-align: top;
+    text-align: left;
+}
+
+.middleLeftContainer {
+    vertical-align: middle;
+    text-align: left;
+}
+
+.topRightContainer {
+    vertical-align: top;
+    text-align: right;
+}
+.middleRightContainer {
+    vertical-align: middle;
+    text-align: right;
+}
+
+.bottomCenterContainer {
+    vertical-align: bottom;
+    text-align: center;
+}
+
+.tableCellStepHeader {
+    display: table-cell;
+}
+
+.imageContainer {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.helpImg {
+    height: 50%;
+}
