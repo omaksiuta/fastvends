@@ -18,53 +18,31 @@
         translate(['input','scan_the_product', 'search_the_product',
         'product_code_short', 'btnHome', 'btnFindProductById']);">
 
-<div id="page" class="table fullScreen">
-    <div class="tableRow headerFontStyle background" style="height: 25%;">
-        <div class="tableCell">
-            <div class="table" style="width: 100%;">
-                <div class="tableRow">
-                    <div class="tableCellStepHeader middleCenterContainer">
-                        <span id="search_the_product"> </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tableRow bodyFontStyle" style="height: 60%;">
-        <div class="tableCell">
-            <div class="table" style="width: 100%;">
-                <div class="tableRow">
-                    <div class="tableCell middleRightContainer leftPart"
-                         style="background-size: 100%; background: url(images/scanTheProduct.jpg) no-repeat center ;">
-                    </div>
-                    <div id="spinnerPlace" class="tableCell middleCenterContainer">
-                        <span id="product_code_short"></span>
-                        <input id="txtProductCode" type="text" class="inputField" value="0000912"/>
-                    </div>
 
-                </div>
-            </div>
-        </div>
+<header id="header">
+    <span id="search_the_product"></span>
+</header>
+<section id="body">
+    <div class="middleRightContainer leftPart"
+         style="background-size: 100%; background: url(images/scanTheProduct.jpg) no-repeat center;">
     </div>
-    <div class="tableRow">
-        <div class="tableCell">
-            <div class="table" style="width: 100%;">
-                <div class="tableRow">
-                    <div class="tableCell middleLeftContainer">
-                        <button type="button" id="btnHome" style="width: 50%;"
-                                onclick="redirectToPage('000home.html');">
-                        </button>
-                    </div>
-                    <div class="tableCell middleRightContainer">
-                        <button type="button" id="btnFindProductById"
-                                onclick="runSpinnerWithRedirect('spinnerPlace','002start.html');">
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div id="spinnerPlace" class=" middleCenterContainer">
+        <span id="product_code_short"></span>
+        <input id="txtProductCode" type="text" class="inputField" value="0000912"/>
     </div>
-</div>
+</section>
+<footer id="footer">
+    <div class=" middleLeftContainer">
+        <button type="button" id="btnHome"
+                onclick="redirectToPage('000home.html');">
+        </button>
+    </div>
+    <div class=" middleRightContainer">
+        <button type="button" id="btnFindProductById"
+                onclick="runSpinnerWithRedirect('spinnerPlace','002start.html');">
+        </button>
+    </div>
+</footer>
 
 
 </body>

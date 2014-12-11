@@ -44,6 +44,7 @@ section {
     border: 15px solid #455A64;
     /*border-radius: 15px;*/
     background-color: #ffffff;
+    cursor: pointer;
 }
 
 .product_big_logo:hover {
@@ -183,17 +184,17 @@ section {
 .ui-state-default, .ui-widget-content .ui-state-default,
 .ui-widget-header .ui-state-default {
     /*position: absolute;*/
-    height: 50px;
-    width: 50px;
-    border-radius: 60%;
+    /*height: 50px;*/
+    /*width: 50px;*/
+    /*border-radius: 60%;*/
     color: #FFFFFF;
-    background-color: #000000;
-    font-size: 40px;
-    font-weight: bold;
-    line-height: 18px;
-    text-shadow: 0 1px 0 #ffffff;
+    background-color: #455A64;
+    font-size: 125%;
+    /*font-weight: bold;*/
+    line-height: 25px;
+    /*text-shadow: 0 1px 0 #ffffff;*/
     margin-left: 94%;
-    /*opacity: 0.2;*/
+    /*opacity: 0.1;*/
 }
 
 .ui-state-hover, .ui-widget-content .ui-state-hover,

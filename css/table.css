@@ -10,14 +10,6 @@
     display: table-row;
 }
 
-.leftPart {
-    width: 30%;
-}
-
-.rightPart {
-    width: 70%;
-}
-
 .tableCell {
     /*border: 2px solid blue;*/
     display: table-cell;
