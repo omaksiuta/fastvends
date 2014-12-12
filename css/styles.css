@@ -1,27 +1,80 @@
 ﻿@charset "utf-8";
-#header{
+
+#btnHome{
+    /*position: fixed;*/
+}
+#btnHome, #btnFindProductById {
+    min-width: 240px;
+    min-height: 90px;
+}
+
+#product_code_short
+{
+    font-size: 200%;
+    font-weight: bold;
+    color: #700D30;
+}
+#txtProductCode, #txtCellPhoneNumber, #clientPriceTxt {
+    min-width: 300px;
+    min-height: 90px;
+    border: 5px dashed #700D30;
+    text-align: center;
+    font-size: 200%;
+    font-weight: bold;
+    color: #700D30;
+
+}
+
+
+header#header {
     height: 20%;
+    width: 100%;
+    min-height: 100px;
+    min-width: 480px;
     font-size: 400%;
     font-weight: bold;
     color: yellow;
-    background-color: #00ADFF;
+    background-color: #700D30;
     text-align: center;
 }
-#body{
-    height: 70%;
-}
-#footer{
-    height: 10%;
-}
 
+section#body {
+    height: 70%;
+    width: 100%;
+    min-height: 300px;
+    min-width: 480px;
+    display: block;
+}
 
 .leftPart {
     width: 30%;
 }
 
+.leftpart > img {
+    /*height: 100%;*/
+    width: 100%;
+    min-height: 300px;
+    min-width: 300px;
+}
+
+footer#footer {
+    height: 10%;
+    width: 100%;
+    min-width: 480px;
+    min-height: 80px;
+}
+
+
+
 .rightPart {
     width: 70%;
 }
+
+
+
+
+
+
 
 
 
@@ -47,11 +100,11 @@
     text-shadow: 2px 2px #0099FF;
 }
 
-.bodyFontStyle {
-    font-size: 250%;
-    font-weight: bold;
-    color: #00ADFF;
-}
+/*.bodyFontStyle {*/
+    /*font-size: 250%;*/
+    /*font-weight: bold;*/
+    /*color: #700D30;*/
+/*}*/
 
 .oldPriceFontStyle {
     /*font-size: 150%;*/
@@ -67,64 +120,24 @@
     color: red;
 }
 
-.inputField {
-    height: 75px;
-    /*background-color: white;*/
-    font-size: 100%;
-    font-weight: bold;
-    color: #00ADFF;
-    text-align: center;
-    text-decoration: solid;
-    /*text-shadow: 2px 2px #0099FF;*/
-    /*border: 5px solid #F7F7F7;*/
-}
 
-#txtProductCode, #txtCellPhoneNumber, #clientPriceTxt {
-    width: 30%;
-    min-width: 200px;
-    /*max-width: 500px;*/
-}
 
-#btnFindProductById, #btnSubmitCellPhoneNumber {
-    font-size: 100%;
-    height: 75px;
-    min-width: 100px;
-    max-width: 350px;
-    /*background-color: white;*/
-    /*border: 5px solid #F7F7F7;*/
-    font-weight: bold;
-    color: #00ADFF;
-    text-align: center;
-    vertical-align: middle;
-}
+/*#btnUseOffer, #btnSubmitCellPhoneNumber, #btnFindProductById,*/
+/*#btnBargain, #btnGetDiscount, #btnGetOneFree, #btnGetPresent,*/
+/*#btnUseOffer, #btnTryAgain,*/
+/*#btnBack, #btnForward, #btnHome, #btnSuggestNewPrice, #btnBuyNow {*/
+/*font-size: 100%;*/
+/*height: 75px;*/
+/*min-width: 250px;*/
+/*max-width: 250px;*/
+/*font-weight: bold;*/
+/*color: #700D30;*/
 
-#btnUseOffer, #btnSubmitCellPhoneNumber, #btnFindProductById, #btnBuyNow {
-    -webkit-animation: blinkYB 2s infinite;
-}
-
-#btnUseOffer, #btnSubmitCellPhoneNumber, #btnFindProductById,
-#btnBargain, #btnGetDiscount, #btnGetOneFree, #btnGetPresent,
-#btnUseOffer, #btnTryAgain,
-#btnBack, #btnForward, #btnHome, #btnSuggestNewPrice, #btnBuyNow {
-    /*font-size: 100%;*/
-    height: 75px;
-    min-width: 250px;
-    max-width: 250px;
-    font-weight: bold;
-    color: #00ADFF;
-
-}
+/*}*/
 
 #btnBuyNow {
     width: 30%;
     min-width: 150px;
-}
-
-
-#btnBack, #btnForward, #btnHome, #btnUseOffer,
-#btnUseOffer, #btnSubmitCellPhoneNumber, #btnFindProductById {
-    font-size: 200%;
-
 }
 
 #productImgMain {
@@ -133,7 +146,7 @@
 }
 
 .background {
-    background-color: #00ADFF; /*http://www.w3schools.com/tags/ref_colorpicker.asp*/
+    background-color: #700D30; /*http://www.w3schools.com/tags/ref_colorpicker.asp*/
     /*http://cssfontstack.com/*/
 }
 
@@ -141,7 +154,6 @@
     width: 100%;
     height: 100%;
 }
-
 
 #currencyLbl, #originalPrice, #minShopPrice, #countOfItemsToGetOneFree, #currencyCode {
     font-size: 12pt;
@@ -185,7 +197,7 @@
     }
 
     100% {
-        /*background: #00ADFF;*/
+        /*background: #700D30;*/
     }
 }
 
@@ -195,8 +207,9 @@
     }
 
     100% {
-        background: #00ADFF;
+        background: #700D30;
     }
 }
+
 
 

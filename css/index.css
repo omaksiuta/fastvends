@@ -97,7 +97,7 @@ section {
     width: 100%;
 }
 
-#products {
+section#products {
     background-color: #ADD9FA;
     text-align: center;
     vertical-align: middle;
