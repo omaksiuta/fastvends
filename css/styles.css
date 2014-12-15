@@ -1,73 +1,83 @@
 ﻿@charset "utf-8";
 
-#btnHome{
-    /*position: fixed;*/
-}
-#btnHome, #btnFindProductById {
-    min-width: 240px;
-    min-height: 90px;
+body {
+    margin: 1%;
 }
 
-#product_code_short
-{
-    font-size: 200%;
+#homePage{
+    font-size: 300%;
     font-weight: bold;
-    color: #700D30;
+    /*text-shadow: 2px 2px #0099FF;*/
+    background-color: #700D30;
+    color: yellow;
+    width: 100%;
+    height: 100%;
+
+
 }
-#txtProductCode, #txtCellPhoneNumber, #clientPriceTxt {
-    min-width: 300px;
+
+
+#btnHome {
+    color: #700D30;
+    border: 5px solid #700D30;
+}
+
+#btnFindProductById {
+    color: #700D30;
+    background-color:  yellow;
+    border: 5px solid #700D30;
+}
+
+#btnFindProductById, #btnHome {
+    min-width: 230px;
     min-height: 90px;
-    border: 5px dashed #700D30;
     text-align: center;
     font-size: 200%;
     font-weight: bold;
-    color: #700D30;
+    /*text-shadow: 2px 2px yellow;*/
+    cursor: pointer;
 
 }
 
+#txtProductCode, #txtCellPhoneNumber, #clientPriceTxt {
+    width: 550px;
+
+    border: 5px solid silver;
+    font-size: 250%;
+    font-weight: bold;
+    color: #700D30;
+    cursor: default;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+
+}
 
 header#header {
     height: 20%;
+    min-height: 110px;
     width: 100%;
-    min-height: 100px;
-    min-width: 480px;
-    font-size: 400%;
+    font-size: 300%;
     font-weight: bold;
     color: yellow;
     background-color: #700D30;
     text-align: center;
 }
 
-section#body {
-    height: 70%;
+section#spinnerPlace {
+    margin-top: 1%;
+    height: 65%;
     width: 100%;
-    min-height: 300px;
-    min-width: 480px;
-    display: block;
-}
-
-.leftPart {
-    width: 30%;
-}
-
-.leftpart > img {
-    /*height: 100%;*/
-    width: 100%;
-    min-height: 300px;
-    min-width: 300px;
+    min-height: 400px;
+    /*text-align: center;*/
+    /*vertical-align: middle;*/
 }
 
 footer#footer {
-    height: 10%;
     width: 100%;
-    min-width: 480px;
-    min-height: 80px;
-}
-
-
-
-.rightPart {
-    width: 70%;
+    min-height: 90px;
+    margin-bottom: 0%;
+    /*border: 5px solid green;*/
 }
 
 
@@ -75,16 +85,7 @@ footer#footer {
 
 
 
-
-
-
-
-.homeFontStyle {
-    font-size: 750%;
-    font-weight: bold;
-    color: yellow;
-    text-shadow: 2px 2px #0099FF;
-}
+/*//////////////////////////////*/
 
 .endFontStyle {
     font-size: 500%;
@@ -101,9 +102,9 @@ footer#footer {
 }
 
 /*.bodyFontStyle {*/
-    /*font-size: 250%;*/
-    /*font-weight: bold;*/
-    /*color: #700D30;*/
+/*font-size: 250%;*/
+/*font-weight: bold;*/
+/*color: #700D30;*/
 /*}*/
 
 .oldPriceFontStyle {
@@ -119,8 +120,6 @@ footer#footer {
     font-weight: bold;
     color: red;
 }
-
-
 
 /*#btnUseOffer, #btnSubmitCellPhoneNumber, #btnFindProductById,*/
 /*#btnBargain, #btnGetDiscount, #btnGetOneFree, #btnGetPresent,*/
@@ -145,15 +144,8 @@ footer#footer {
     /*height: 100%;*/
 }
 
-.background {
-    background-color: #700D30; /*http://www.w3schools.com/tags/ref_colorpicker.asp*/
-    /*http://cssfontstack.com/*/
-}
 
-.fullScreen {
-    width: 100%;
-    height: 100%;
-}
+
 
 #currencyLbl, #originalPrice, #minShopPrice, #countOfItemsToGetOneFree, #currencyCode {
     font-size: 12pt;
@@ -181,7 +173,7 @@ footer#footer {
     text-align: center;
     text-decoration: solid;
     text-shadow: 2px 2px #F7F7F7;
-    border: 5px solid #F7F7F7;
+    border: 5px solid green;
 }
 
 .hiddenInfo {
@@ -190,26 +182,3 @@ footer#footer {
     color: #F7F7F7;
     text-shadow: 1px 1px #0099FF;
 }
-
-@-webkit-keyframes blinkYB {
-    0% {
-        background: yellow;
-    }
-
-    100% {
-        /*background: #700D30;*/
-    }
-}
-
-@-webkit-keyframes blinkRB {
-    0% {
-        background: red;
-    }
-
-    100% {
-        background: #700D30;
-    }
-}
-
-
-

@@ -100,9 +100,9 @@ var translations = {
         "en": "Product Is Found",
         "ru": "Информация о товаре"
     },
-    "search_the_product": {
-        "en": "Search the product",
-        "ru": "Поиск Tовара"
+    "input_product_code": {
+        "en": "Input product code",
+        "ru": "Введите код товара"
     },
     "scan_the_product": {
         "en": "Scan The Product",

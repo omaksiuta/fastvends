@@ -6,44 +6,68 @@
     <title></title>
     <link href="css/styles.css" rel="stylesheet"/>
     <link href="css/table.css" rel="stylesheet"/>
+    <link href="css/keypad.css" rel="stylesheet"/>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/spin.min.js" type="text/javascript"></script>
     <script src="js/translator.js" type="text/javascript"></script>
     <script src="js/productsFinder.js" type="text/javascript"></script>
-    <script src="js/numKeypad.js" type="text/javascript"></script>
     <script src="lang/words.js" type="text/javascript"></script>
+    <script src="js/numKeypad.js" type="text/javascript"></script>
 </head>
 <body onload="
         saveToSessionStorage('product', findProduct('codeTbd'));
         saveToSessionStorage('page', '001scanTheProduct.html');
-        translate(['input','scan_the_product', 'search_the_product',
+        translate(['input','scan_the_product', 'input_product_code',
         'product_code_short', 'btnHome', 'btnFindProductById']);">
 
 
-<header id="header">
-    <span id="search_the_product"></span>
+<header id="header" class="table">
+    <div class="tableRow">
+        <div class="tableCell middleCenterContainer">
+            <span id="input_product_code"></span>
+        </div>
+    </div>
 </header>
 
-<section id="body">
-    <div class="leftPart">
-        <img src="images/scanTheProduct.jpg">
-    </div>
-    <div id="spinnerPlace" class="middleRightContainer">
-        <span id="product_code_short"></span>
 
-        <input id="txtProductCode" type="number" pattern="\d*" class="inputField" value="0000912"/>
+<section id="spinnerPlace" class="table">
+    <div class="tableRow">
+        <div class="tableCell middleCenterContainer" style="height: 100%; width: 100%;">
+            <div id="txtProductCode">0000912</div>
 
-        <button type="button" id="btnFindProductById"
-                onclick="runSpinnerWithRedirect('spinnerPlace','002start.html');">
-        </button>
+            <div id="keypad" class=" middleCenterContainer">
+                <button onclick="keyPadInput('txtProductCode', '1','16')">1</button>
+                <button onclick="keyPadInput('txtProductCode', '2','16')">2</button>
+                <button onclick="keyPadInput('txtProductCode', '3','16')">3</button>
+                <br>
+                <button onclick="keyPadInput('txtProductCode', '4','16')">4</button>
+                <button onclick="keyPadInput('txtProductCode', '5','16')">5</button>
+                <button onclick="keyPadInput('txtProductCode', '6','16')">6</button>
+                <br>
+                <button onclick="keyPadInput('txtProductCode', '7','16')">7</button>
+                <button onclick="keyPadInput('txtProductCode', '8','16')">8</button>
+                <button onclick="keyPadInput('txtProductCode', '9','16')">9</button>
+                <br>
+                <button onclick="keyPadInput('txtProductCode', '.','16')">.</button>
+                <button onclick="keyPadInput('txtProductCode', '0','16')">0</button>
+                <button onclick="keyPadInput('txtProductCode', 'deleteEndRightSymbol','')"><</button>
+            </div>
+        </div>
     </div>
 </section>
 
-<footer id="footer">
-    <div>
-        <button type="button" id="btnHome"
-                onclick="redirectToPage('000home.html');">
-        </button>
+<footer id="footer" class="table">
+    <div class="tableRow">
+        <div class="tableCell topLeftContainer">
+            <button id="btnHome"
+                    onclick="redirectToPage('000home.html');">
+            </button>
+        </div>
+        <div class="tableCell topRightContainer">
+            <button id="btnFindProductById"
+                    onclick="runSpinnerWithRedirect('spinnerPlace','002start.html');">
+            </button>
+        </div>
     </div>
 </footer>
 

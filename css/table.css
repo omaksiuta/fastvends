@@ -2,7 +2,6 @@
 /* CSS Document */
 
 .table /*http://stackoverflow.com/questions/10509675/create-table-layout-using-div-with-width-height-as-percentages*/                                     {
-    height: 100%;
     display: table;
 }
 
@@ -42,6 +41,10 @@
 }
 .middleRightContainer {
     vertical-align: middle;
+    text-align: right;
+}
+.bottomRightContainer {
+    vertical-align: bottom;
     text-align: right;
 }
 
