@@ -1,19 +1,7 @@
 ﻿@charset "utf-8";
 
-#productImgMain {
-    width: 275px;
-    height: 250px;
-}
 
-#productName{
-    font-size: 250%;
-    font-weight: bold;
-    color: #700D30;
-}
-#priceInfo{
-    font-size: 150%;
-    color: #700D30;
-}
+
 
 #availableProducts button
 {

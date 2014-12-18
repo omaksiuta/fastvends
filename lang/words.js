@@ -26,7 +26,7 @@ var translations = {
 
     "btnUseOffer": {
         "en": "Use Now",
-        "ru": "Применить"
+        "ru": "Получить"
     },
     "btnHome": {
         "en": "Home",
@@ -142,7 +142,7 @@ var translations = {
     },
     "you_have_got": {
         "en": "You've got",
-        "ru": "Ваша скидка"
+        "ru": "Cкидка"
     },
     "off": {
         "en": "Off",

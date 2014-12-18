@@ -1,5 +1,4 @@
-﻿<!--http://hammerjs.github.io/-->
-<html>
+﻿<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
     <!-- <meta http-equiv="refresh" content="15;url=index.html"> -->
@@ -32,7 +31,7 @@
     </script>
 </head>
 <body onload="
-        $('#shopPriceHiddenInfo').hide();
+        $('#shopPriceHiddenInfo').show();
         saveToSessionStorage('page', '002start.html');
         setProductInfo();
         translate(['product_price_normal','choose_way', 'btnHome','btnBack', 'btnForward',
@@ -50,63 +49,64 @@
     </div>
 </header>
 
+<section id="spinnerPlace">
+    <div class="table" style="width: 100%;">
+        <div class="tableRow" >
+            <div class="tableCell middleCenterContainer" >
+                <span id="productName"></span>
+                <div id="priceInfo" onclick="showHideElement('#shopPriceHiddenInfo')">
 
-<section id="spinnerPlace" class="table">
-    <div class="tableRow">
-        <div class="tableCell middleCenterContainer" style="width: 50%;">
-            <span id="productName"></span>
-            <p>
-            <img id="productImgMain" src=""/>
-            </p>
-            <div id="priceInfo" onclick="showHideElement('#shopPriceHiddenInfo')">
+                    <span id="product_price_normal"></span>
+                    :
+                    <span id="originalShopPrice"></span>
+                    <span id="currencyCodeOriginalPrice"></span>
 
-                <span id="product_price_normal"></span>
-                :
-                <span id="originalShopPrice"></span>
-                <span id="currencyCodeOriginalPrice"></span>
+                    <div id="shopPriceHiddenInfo">
+                        <span id="product_code"></span>:
+                        <span id="productIdLbl"></span>
+                        <br/>
+                        <span id="min_Shop_Price"></span>:
+                        <span id="minShopPriceLbl"></span>
+                        <span id="currencyCodeMinimalPrice"></span>
 
-                <div id="shopPriceHiddenInfo">
-                    <span id="product_code"></span>:
-                    <span id="productIdLbl"></span>
-                    <br/>
-                    <span id="min_Shop_Price"></span>:
-                    <span id="minShopPriceLbl"></span>
-                    <span id="currencyCodeMinimalPrice"></span>
-
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="tableCell middleCenterContainer">
-            <div id="availableProducts" class="middleRightContainer">
-                <button type="button" id="btnGetDiscount"
-                        onclick="redirectToPage('003GetDiscount.html');">
-                </button>
-
-                <button type="button" id="btnBargain"
-                        onclick="redirectToPage('003Bargain.html');">
-                </button>
-
-                <button type="button" id="btnGetOneFree"
-                        onclick="redirectToPage('003GetOneFree.html');">
-                </button>
-
-                <button type="button" id="btnGetPresent"
-                        onclick="redirectToPage('003GetPresent.html');">
-                </button>
-            </div>
-
-
-        </div>
-
     </div>
+    <div class="table" style="width: 100%;">
+        <div class="tableRow">
+            <div class="tableCell middleCenterContainer">
+                <img id="productImgMain" src=""/>
+            </div>
+            <div class="tableCell middleCenterContainer">
+                <div id="availableProducts" class="middleRightContainer">
+                    <button type="button" id="btnGetDiscount"
+                            onclick="redirectToPage('003GetDiscount.html');">
+                    </button>
+
+                    <button type="button" id="btnBargain"
+                            onclick="redirectToPage('003Bargain.html');">
+                    </button>
+
+                    <button type="button" id="btnGetOneFree"
+                            onclick="redirectToPage('003GetOneFree.html');">
+                    </button>
+
+                    <!--<button type="button" id="btnGetPresent"-->
+                    <!--onclick="redirectToPage('003GetPresent.html');">-->
+                    <!--</button>-->
+                </div>
 
 
+            </div>
+        </div>
+    </div>
 </section>
 
 <footer id="footer" class="table">
     <div class="tableRow">
-        <div class="tableCell topLeftContainer">
+        <div class="tableCell bottomLeftContainer">
             <button id="btnHome"
                     onclick="redirectToPage('000home.html');">
             </button>

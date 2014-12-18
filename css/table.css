@@ -10,7 +10,7 @@
 }
 
 .tableCell {
-    /*border: 2px solid blue;*/
+    border: 2px solid blue;
     display: table-cell;
 
 }
@@ -43,6 +43,12 @@
     vertical-align: middle;
     text-align: right;
 }
+
+.bottomLeftContainer {
+    vertical-align: bottom;
+    text-align: left;
+}
+
 .bottomRightContainer {
     vertical-align: bottom;
     text-align: right;
