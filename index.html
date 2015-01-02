@@ -38,7 +38,11 @@
     <script type="text/javascript">
         $(function () {
             storeDefaultParams();
-            translate(['lang_abbr_rus', 'lang_abbr_eng']);
+            translate(['lang_abbr_rus', 'lang_abbr_eng',
+                'menuAbout', 'menuProducts', 'menuPricing',
+                'menuEquipment', 'menuBehaviour', 'menuSecurity', 'menuContactUs',
+                'sectionAbout', 'sectionProducts', 'sectionPricing', 'sectionEquipment',
+                'sectionBehaviour', 'sectionSecurity', 'sectionContactUs']);
             //////////////////////////////////////////////
             //Smooth Scrolling
             $('a[href*=#]:not([href=#])').click(function () {
@@ -58,13 +62,12 @@
             $("#popupGetOneFree").dialog({//Product Demo Popups//http://api.jquerymobile.com/popup/#method-destroy
                 height: 800,
                 width: 600,
-//                modal: true,
+                modal: true,
                 resizable: false,
                 dialogClass: 'no-close success-dialog',
                 autoOpen: false,
-                closeText: "x",
+                closeText: "X",
                 show: {
-                    effect: "blind",
                     duration: 1000
                 },
                 hide: {
@@ -72,9 +75,8 @@
                     duration: 1000
                 }
 
-            }).draggable();
-
-            $("#bannerGetOneFree").click(function () {
+            });
+            $(".product_big_logo").click(function () {
                 $("#popupGetOneFree").dialog("open");
             });
         });
@@ -85,12 +87,12 @@
         #popupGetOneFree {
             border: 25px solid #455A64;
             background-color: white;
-            min-width: 400px;
-            min-height: 400px;
-            text-align: center;
+            /*min-width: 400px;*/
+            min-height: 1200px;
+            /*text-align: center;*/
         }
 
-        #popupGetOneFree #iframe_get_discount {
+         #iframe_get_discount {
             height: 100%;
             width: 100%;
         }
@@ -115,13 +117,13 @@
                 <label for="show-menu" class="show-menu"><span>Menu &#9776;</span></label>
                 <input type="checkbox" id="show-menu" role="button">
                 <ul id="menu">
-                    <li><a id="menu_about" href="#section_about">About</a></li>
-                    <li><a id="menu_products" href="#section_products">Products</a></li>
-                    <li><a id="menu_pricing" href="#section_pricing">Pricing</a></li>
-                    <li><a id="menu_equipment" href="#section_equipment">Equipment</a></li>
-                    <li><a id="menu_behaviour" href="#section_behaviour">Behaviour</a></li>
-                    <li><a id="menu_security" href="#section_security">Security</a></li>
-                    <li><a id="menu_contacts" href="#section_contacts">Contact Us</a></li>
+                    <li><a id="menu_about" href="#section_about"><span id="menuAbout"></span></a></li>
+                    <li><a id="menu_products" href="#section_products"><span id="menuProducts"></span></a></li>
+                    <li><a id="menu_pricing" href="#section_pricing"><span id="menuPricing"></span></a></li>
+                    <li><a id="menu_equipment" href="#section_equipment"><span id="menuEquipment"></span></a></li>
+                    <li><a id="menu_behaviour" href="#section_behaviour"><span id="menuBehaviour"></span></a></li>
+                    <li><a id="menu_security" href="#section_security"><span id="menuSecurity"></span></a></li>
+                    <li><a id="menu_contacts" href="#section_contacts"><span id="menuContactUs"></span></a></li>
                 </ul>
             </div>
         </div>
@@ -130,7 +132,7 @@
 
 
 <section id="about" class="middleCenterContainer">
-    <div id="section_about" class="section_name">About</div>
+    <div id="section_about" class="section_name"><span id="sectionAbout"></span></div>
         <span id="aboutText">
             As people may hesitate to bargain verbally but desire to buy products cheaper.
             <br>And Shop Owner is ready to sell products with various discounts while it is profitable.
@@ -144,7 +146,7 @@
 </section>
 
 <section id="products">
-    <div id="section_products" class="section_name">Products</div>
+    <div id="section_products" class="section_name"><span id="sectionProducts"></span></div>
     <div id="bannerGetDiscount" class="product_big_logo">
         <span>Get Discount</span>
     </div>
@@ -154,9 +156,6 @@
     <div id="bannerGetOneFree" class="product_big_logo">
         <span>Get One Free</span>
     </div>
-    <!--<div id="bannerPresent" class="product_big_logo">-->
-        <!--<span>Present</span>-->
-    <!--</div>-->
 </section>
 
 <section id="sloganAfterProducts" class="slogan">
@@ -164,7 +163,7 @@
 </section>
 
 <section id="pricing">
-    <div id="section_pricing" class="section_name">Pricing</div>
+    <div id="section_pricing" class="section_name"><span id="sectionPricing"></span></div>
 
     <div id="priceName"><span>90 Days trial</span></div>
     <div class="price_graph">
@@ -192,7 +191,7 @@
 </section>
 
 <section id="equipment">
-    <div id="section_equipment" class="section_name">Equipment</div>
+    <div id="section_equipment" class="section_name"><span id="sectionEquipment"></span></div>
         <span id="equipmentText">
         It is just a touchscreen tablet computer with software <br/> which interacts shop's database via WiFi <br/> and notifies clients via SMS
         </span>
@@ -211,7 +210,7 @@
 </section>
 
 <section id="behaviour">
-    <div id="section_behaviour" class="section_name">Behaviour</div>
+    <div id="section_behaviour" class="section_name"><span id="sectionBehaviour"></span></div>
         <span id="behaviourText">
         When a client in the shop and finds the product which could be bought
         <br/>And no discount has been announced in the shop for this product
@@ -227,7 +226,7 @@
 </section>
 
 <section id="security">
-    <div id="section_security" class="section_name">Security</div>
+    <div id="section_security" class="section_name"><span id="sectionSecurity"></span></div>
         <span id="securityText">
         Technical specialist connects fast vending solution to shop's database inside shop
         <br/>Shop's manager submits range of minimum and maximum prices
@@ -243,7 +242,7 @@
 </section>
 
 <section id="contacts">
-    <div id="section_contacts" class="section_name">Contact Us</div>
+    <div id="section_contacts" class="section_name"><span id="sectionContactUs"></span></div>
         <span id="contactsText">
             Tel: +38(093)988-8338 | Email: fastvends@gmail.com
         </span>
@@ -275,7 +274,6 @@
 
 
 <div id="popupGetOneFree">
-    <span id="closeMe"></span>
     <iframe id="iframe_get_discount" src="000home.html" frameborder="0"></iframe>
 </div>
 

@@ -5,11 +5,13 @@
     <title></title>
     <link href="css/styles.css" rel="stylesheet"/>
     <link href="css/table.css" rel="stylesheet"/>
+    <link href="css/keypad.css" rel="stylesheet"/>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/spin.min.js" type="text/javascript"></script>
     <script src="js/translator.js" type="text/javascript"></script>
     <script src="js/productsFinder.js" type="text/javascript"></script>
     <script src="lang/words.js" type="text/javascript"></script>
+    <script src="js/numKeypad.js" type="text/javascript"></script>
 </head>
 <body onload="
         saveToSessionStorage('product', findProduct('codeTbd'));
@@ -17,54 +19,56 @@
         translate(['enter_phone_to_proceed', 'btnHome', 'btnSubmitCellPhoneNumber']);">
 
 
-<div id="page" class="table fullScreen">
-    <div class="tableRow headerFontStyle background" style="height: 25%;">
-        <div class="tableCell">
-            <div class="table" style="width: 100%;">
-                <div class="tableRow">
-                    <div class="tableCellStepHeader middleCenterContainer">
-                        <span id="enter_phone_to_proceed">!</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="tableRow bodyFontStyle" style="height: 60%;">
-        <div id="spinnerPlace" class="tableCell">
-
-
-            <div class="table" style="width: 100%;">
-                <div class="tableRow">
-                    <div class="tableCell middleRightContainer imgPart"
-                         style="background-size: 100%; background: url(images/enterCellPhone.jpg) no-repeat center ;">
-                    </div>
-                    <div class="tableCell middleCenterContainer">
-                        <input id="txtCellPhoneNumber" type="text" class="inputField" value="+38(097)658-9559"/>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
+<header id="header" class="table">
     <div class="tableRow">
-        <div class="tableCell">
-            <div class="table" style="width: 100%;">
-                <div class="tableRow">
-                    <div class="tableCell middleLeftContainer">
-                        <button type="button" id="btnHome" style="width: 30%;"
-                                onclick="redirectToPage('000home.html');">
-                        </button>
-                    </div>
-                    <div class="tableCell middleRightContainer" style="width: 50%;">
-                        <button type="button" id="btnSubmitCellPhoneNumber"
-                                onclick="runSpinnerWithRedirect('spinnerPlace','005thankYou.html');">
-                        </button>
-                    </div>
-                </div>
+        <div class="tableCell middleCenterContainer">
+            <span id="enter_phone_to_proceed"></span>
+        </div>
+    </div>
+</header>
+
+<section id="spinnerPlace" class="table">
+    <div class="tableRow">
+        <div class="tableCell middleCenterContainer">
+            <div id="txtCellPhoneNumber">380976589559</div>
+
+            <div id="keypad" class=" middleCenterContainer">
+                <button onclick="keyPadInput('txtCellPhoneNumber', '1','16')">1</button>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '2','16')">2</button>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '3','16')">3</button>
+                <br>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '4','16')">4</button>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '5','16')">5</button>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '6','16')">6</button>
+                <br>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '7','16')">7</button>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '8','16')">8</button>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '9','16')">9</button>
+                <br>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '+','16')">+</button>
+                <button onclick="keyPadInput('txtCellPhoneNumber', '0','16')">0</button>
+                <button onclick="keyPadInput('txtCellPhoneNumber', 'deleteEndRightSymbol','')"><</button>
             </div>
         </div>
     </div>
-</div>
+</section>
+
+
+
+<footer id="footer" class="table">
+    <div class="tableRow">
+        <div class="tableCell topLeftContainer">
+            <button id="btnHome"
+                    onclick="redirectToPage('000home.html');">
+            </button>
+        </div>
+        <div class="tableCell topRightContainer">
+            <button type="button" id="btnSubmitCellPhoneNumber"
+                    onclick="runSpinnerWithRedirect('spinnerPlace','005thankYou.html');">
+            </button>
+        </div>
+    </div>
+</footer>
 
 
 </body>

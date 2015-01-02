@@ -1,4 +1,60 @@
 var translations = {
+    "menuAbout": {
+        "en": "About",
+        "ru": "Компания"
+    },
+    "menuProducts": {
+        "en": "Products",
+        "ru": "Продукты"
+    },
+    "menuPricing": {
+        "en": "Pricing",
+        "ru": "Цены"
+    },
+    "menuEquipment": {
+        "en": "Equipment",
+        "ru": "Оборудование"
+    },
+    "menuBehaviour": {
+        "en": "Behaviour",
+        "ru": "Поведение"
+    },
+    "menuSecurity": {
+        "en": "Security",
+        "ru": "Безопасность"
+    },
+    "menuContactUs": {
+        "en": "Contact Us",
+        "ru": "Контакты"
+    },
+    "sectionAbout": {
+        "en": "About",
+        "ru": "Компания"
+    },
+    "sectionProducts": {
+        "en": "Products",
+        "ru": "Продукты"
+    },
+    "sectionPricing": {
+        "en": "Pricing",
+        "ru": "Цены"
+    },
+    "sectionEquipment": {
+        "en": "Equipment",
+        "ru": "Оборудование"
+    },
+    "sectionBehaviour": {
+        "en": "Behaviour",
+        "ru": "Поведение"
+    },
+    "sectionSecurity": {
+        "en": "Security",
+        "ru": "Безопасность"
+    },
+    "sectionContactUs": {
+        "en": "Contact Us",
+        "ru": "Контакты"
+    },
     "btnBargain": {
         "en": "Bargain",
         "ru": "Торговаться"
