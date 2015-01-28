@@ -35,9 +35,6 @@ function generateNewShopPriceWithMinimumChange(minShopPrice, currentShopPrice, c
     return newShopprice;
 }
 
-
-
-
 function genRandomDiscount(minShopPrice, originalShopPrice) {
 
     var result = (Math.random() * (originalShopPrice - minShopPrice)) + 1;
@@ -53,29 +50,28 @@ function genRandomDiscount(minShopPrice, originalShopPrice) {
     return result;
 }
 
-//function buyForDisplayedShopPrice(shopPrice, originalShopPrice, currencyCode) {
-//    //alert("You've agreed to buy for price " + shopPrice + " " + currencyCode);
-//    transferToBuy(shopPrice, originalShopPrice, currencyCode);
-//}
 
-//function transferToBuy(agreedPrice, originalShopPrice, currencyCode) {
-//    var transferUrl = "007payNow.htm?dbm=gbo"
-//        + "&agreedPrice=" + agreedPrice
-//        + "&originalShopPrice=" + originalShopPrice
-//        + "&currencyCode=" + currencyCode;
-//    window.location.href = transferUrl;
-//}
+function setProductInfo() {
+    var product = getFromSessionStorage('product');
 
-//function getParametersFromCurrentUrl(qs) {
-//    qs = qs.split("+").join(" ");
+    var newShopPrice = document.getElementById('finalShopPrice').innerText;
+    if (newShopPrice.length == 0) {
+        document.getElementById('finalShopPrice').innerText = getFromSessionStorage('originalShopPrice');
+    }
+    document.getElementById('currencyCodeNewPrice').innerText = getFromSessionStorage('currencyCode');
+}
 
-//    var params = {}, tokens,
-//        re = /[?&]?([^=]+)=([^&]*)/g;
-
-//    while (tokens = re.exec(qs)) {
-//        params[decodeURIComponent(tokens[1])]
-//            = decodeURIComponent(tokens[2]);
-//    }
-
-//    return params;
-//}
+function validateSuggestedPrice(minShopPrice, newShopPrice, clientPrice, countOfItemsToGetOneFree) {
+    if (clientPrice >= newShopPrice || (clientPrice / minShopPrice) > 1.3) {
+        //alert("We are agree with Your Offer! \nSell price is " + clientPrice + " " + currencyCode);
+        saveToSessionStorage('priceFinal', clientPrice);
+        runSpinnerWithRedirect('spinnerPlace', 'thankYou.html');
+    }
+    else {
+        var newOfferPrice = generateNewShopPrice(minShopPrice, newShopPrice, clientPrice, countOfItemsToGetOneFree);
+        document.getElementById('finalShopPrice').innerText = newOfferPrice.toFixed(2);
+        document.getElementById('clientPriceTxt').value = "";
+        saveToSessionStorage('priceFinal', newOfferPrice);
+        //alert("We've just provided Best Offer. \nClick [Buy Now!] to agree or suggest your price!");
+    }
+}

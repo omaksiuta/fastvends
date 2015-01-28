@@ -15,7 +15,7 @@
 </head>
 <body onload="
         saveToSessionStorage('product', findProduct('codeTbd'));
-        saveToSessionStorage('page', '004enterClientInfo.html');
+        saveToSessionStorage('page', '003enterMobile.html');
         translate(['enter_phone_to_proceed', 'btnHome', 'btnSubmitCellPhoneNumber']);">
 
 
@@ -51,7 +51,9 @@
                 </div>
             </div>
         </div>
-
+        <div class="tableCell middleRightContainer halfSide">
+            <img id="imgScanTheProduct" src="images/Phone.png"/>
+        </div>
     </div>
 </section>
 
@@ -65,7 +67,7 @@
         </div>
         <div class="tableCell topRightContainer">
             <button type="button" id="btnSubmitCellPhoneNumber"
-                    onclick="runSpinnerWithRedirect('spinnerPlace','thankYou.html');">
+                    onclick="runSpinnerWithRedirect('spinnerPlace','005thankYou.html');">
             </button>
         </div>
     </div>

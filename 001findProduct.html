@@ -32,28 +32,29 @@
 
 <section id="spinnerPlace" class="table">
     <div class="tableRow">
-
-        <div class="tableCell middleLeftContainer">
-            <div id="txtProductCode">0000912</div>
-            <div id="keypad" class=" middleCenterContainer">
-                <button onclick="keyPadInput('txtProductCode', '1','16')">1</button>
-                <button onclick="keyPadInput('txtProductCode', '2','16')">2</button>
-                <button onclick="keyPadInput('txtProductCode', '3','16')">3</button>
-                <br>
-                <button onclick="keyPadInput('txtProductCode', '4','16')">4</button>
-                <button onclick="keyPadInput('txtProductCode', '5','16')">5</button>
-                <button onclick="keyPadInput('txtProductCode', '6','16')">6</button>
-                <br>
-                <button onclick="keyPadInput('txtProductCode', '7','16')">7</button>
-                <button onclick="keyPadInput('txtProductCode', '8','16')">8</button>
-                <button onclick="keyPadInput('txtProductCode', '9','16')">9</button>
-                <br>
-                <button onclick="keyPadInput('txtProductCode', '.','16')">.</button>
-                <button onclick="keyPadInput('txtProductCode', '0','16')">0</button>
-                <button onclick="keyPadInput('txtProductCode', 'deleteEndRightSymbol','')"><</button>
+        <div class="tableCell middleLeftContainer halfSide">
+            <div>
+                <div id="txtProductCode">0000912</div>
+                <div id="keypad">
+                    <button onclick="keyPadInput('txtProductCode', '1','16')">1</button>
+                    <button onclick="keyPadInput('txtProductCode', '2','16')">2</button>
+                    <button onclick="keyPadInput('txtProductCode', '3','16')">3</button>
+                    <br>
+                    <button onclick="keyPadInput('txtProductCode', '4','16')">4</button>
+                    <button onclick="keyPadInput('txtProductCode', '5','16')">5</button>
+                    <button onclick="keyPadInput('txtProductCode', '6','16')">6</button>
+                    <br>
+                    <button onclick="keyPadInput('txtProductCode', '7','16')">7</button>
+                    <button onclick="keyPadInput('txtProductCode', '8','16')">8</button>
+                    <button onclick="keyPadInput('txtProductCode', '9','16')">9</button>
+                    <br>
+                    <button onclick="keyPadInput('txtProductCode', '.','16')">.</button>
+                    <button onclick="keyPadInput('txtProductCode', '0','16')">0</button>
+                    <button onclick="keyPadInput('txtProductCode', 'deleteEndRightSymbol','')"><</button>
+                </div>
             </div>
         </div>
-        <div class="tableCell middleRightContainer">
+        <div class="tableCell middleRightContainer halfSide">
             <img id="imgScanTheProduct" src="images/scanTheProduct.jpg"/>
         </div>
     </div>
@@ -61,15 +62,15 @@
 
 <footer id="footer" class="table">
     <div class="tableRow">
-        <div class="tableCell topLeftContainer">
+        <div class="tableCell topLeftContainer halfSide">
             <button id="btnHome"
                     onclick="redirectToPage('000home.html');">
             </button>
         </div>
-        <div class="tableCell topRightContainer">
+        <div class="tableCell topRightContainer halfSide">
             <button id="btnFindProductById"
                     onclick="runSpinnerWithRedirect('spinnerPlace','002startBargain.html');">
-                    <!--onclick="runSpinnerWithRedirect('spinnerPlace','002startBargain.html');">-->
+                <!--onclick="runSpinnerWithRedirect('spinnerPlace','002startBargain.html');">-->
             </button>
         </div>
     </div>

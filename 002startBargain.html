@@ -1,0 +1,144 @@
+﻿<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" charset="utf-8">
+    <!-- <meta http-equiv="refresh" content="15;url=index.html"> -->
+    <title></title>
+    <link href="css/styles.css" rel="stylesheet"/>
+    <link href="css/table.css" rel="stylesheet"/>
+    <link href="css/keypad.css" rel="stylesheet"/>
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/spin.min.js" type="text/javascript"></script>
+    <script src="js/translator.js" type="text/javascript"></script>
+    <script src="js/productsFinder.js" type="text/javascript"></script>
+    <script src="js/bargainScripts.js" type="text/javascript"></script>
+    <script src="js/numKeypad.js" type="text/javascript"></script>
+    <script src="lang/words.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        function setProductInfo() {
+            document.getElementById('productIdLbl').innerText = getFromSessionStorage('productId');
+            document.getElementById('productName').innerText = getFromSessionStorage('productName');
+
+            document.getElementById("productImgMain").src = getFromSessionStorage('productImageUrl');
+
+            document.getElementById('minShopPriceLbl').innerText = getFromSessionStorage('minShopPrice');
+
+            var currencyCode = getFromSessionStorage('currencyCode');
+            document.getElementById('currencyCodeMinimalPrice').innerText = currencyCode;
+            document.getElementById('currencyCodeOriginalPrice').innerText = currencyCode;
+
+            document.getElementById('originalShopPrice').innerText = getFromSessionStorage('originalShopPrice');
+            ////
+            saveToSessionStorage('finalShopPrice', getFromSessionStorage('originalShopPrice'));
+        }
+    </script>
+</head>
+<body onload="
+        $('#shopPriceHiddenInfo').show();
+        saveToSessionStorage('page', '002startBargain.html');
+        setProductInfo();
+        translate(['product_price_normal', 'btnHome','btnBack', 'btnForward',
+        'product_code','min_Shop_Price',
+        'btnBuyNow','product_price_offer', 'suggest_new_price',
+        'btnSuggestNewPrice', 'finalShopPrice',
+        'bargain_header', 'btnHome','btnBack']);">
+
+<header id="header" class="table">
+    <div class="tableRow">
+        <div class="tableCell middleCenterContainer">
+            <span id="bargain_header">!</span>
+        </div>
+    </div>
+</header>
+
+<section id="spinnerPlace" class="table">
+    <div class="tableRow">
+        <div class="tableCell middleCenterContainer halfSide">
+            <div id="shopsOffer">
+                <span class="offerPriceFontStyle" id="product_price_offer"></span>
+                <span class="offerPriceFontStyle" id="finalShopPrice"></span>
+                <span class="offerPriceFontStyle" id="currencyCodeNewPrice"></span>
+                <br>
+
+            </div>
+
+            <div id="clientOffer">
+                <div id="clientPriceTxt">101</div>
+                <div id="keypad">
+                    <button onclick="keyPadInput('clientPriceTxt', '1','16')">1</button>
+                    <button onclick="keyPadInput('clientPriceTxt', '2','16')">2</button>
+                    <button onclick="keyPadInput('clientPriceTxt', '3','16')">3</button>
+                    <br>
+                    <button onclick="keyPadInput('clientPriceTxt', '4','16')">4</button>
+                    <button onclick="keyPadInput('clientPriceTxt', '5','16')">5</button>
+                    <button onclick="keyPadInput('clientPriceTxt', '6','16')">6</button>
+                    <br>
+                    <button onclick="keyPadInput('clientPriceTxt', '7','16')">7</button>
+                    <button onclick="keyPadInput('clientPriceTxt', '8','16')">8</button>
+                    <button onclick="keyPadInput('clientPriceTxt', '9','16')">9</button>
+                    <br>
+                    <button onclick="keyPadInput('clientPriceTxt', '.','16')">.</button>
+                    <button onclick="keyPadInput('clientPriceTxt', '0','16')">0</button>
+                    <button onclick="keyPadInput('clientPriceTxt', 'deleteEndRightSymbol','')"><</button>
+                </div>
+                <button type="button" id="btnSuggestNewPrice"
+                        onclick="validateSuggestedPrice(
+                    getFromSessionStorage('minShopPrice'),
+                    parseFloat(document.getElementById('finalShopPrice').innerText),
+                    parseFloat(document.getElementById('clientPriceTxt').value),
+                    getFromSessionStorage('countOfItemsToGetOneFree'))"></button>
+            </div>
+
+
+        </div>
+        <div class="tableCell middleCenterContainer halfSide">
+            <div>
+                <span id="productName"></span>
+                <br>
+
+                <div id="priceInfo" onclick="showHideElement('#shopPriceHiddenInfo')">
+                    <span id="product_code"></span>:
+                    <span id="productIdLbl"></span>
+                    <br>
+                    <span id="product_price_normal"></span>:
+                    <span id="originalShopPrice"></span>
+                    <span id="currencyCodeOriginalPrice"></span>
+                    <br>
+
+                    <div id="shopPriceHiddenInfo">
+                        <span id="min_Shop_Price"></span>:
+                        <span id="minShopPriceLbl"></span>
+                        <span id="currencyCodeMinimalPrice"></span>
+                    </div>
+                </div>
+                <br>
+                <img id="productImgMain" src=""/>
+            </div>
+        </div>
+    </div>
+
+
+</section>
+
+<footer id="footer" class="table">
+    <div class="tableRow">
+        <div class="tableCell topLeftContainer halfSide">
+            <button id="btnHome"
+                    onclick="redirectToPage('000home.html');">
+            </button>
+            <button id="btnBack"
+                    onclick="redirectToPage('001findProduct.html');">
+            </button>
+        </div>
+        <div class="tableCell topRightContainer halfSide">
+            <button type="button" id="btnBuyNow"
+                    onclick="saveToSessionStorage('priceFinal', document.getElementById('finalShopPrice').innerText);
+                                redirectToPage('003enterMobile.html');">
+            </button>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

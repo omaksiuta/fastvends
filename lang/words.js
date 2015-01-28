@@ -170,7 +170,7 @@ var translations = {
     },
     "product_price_normal": {
         "en": "Normal Price",
-        "ru": "Цена"
+        "ru": "Начальная Цена"
     },
     "product_price_offer": {
         "en": "Offer Price is",
