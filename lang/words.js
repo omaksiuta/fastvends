@@ -125,8 +125,12 @@ var translations = {
         "ru": "Смс сообщение с информацией о скидке отправлено. "
     },
     "info_enjoy_shopping": {
-        "en": "Have a great shopping!",
+        "en": "Enjoy your shopping!",
         "ru": "Приятных покупок!"
+    },
+    "info_thank_you": {
+        "en": "Thank You!",
+        "ru": "Спасибо!"
     },
     "get_discount": {
         "en": "Get Discount",

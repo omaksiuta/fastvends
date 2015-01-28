@@ -56,11 +56,8 @@
         <option value="$PROJECT_DIR$/css/keypad.css" />
         <option value="$PROJECT_DIR$/js/bargainScripts.js" />
         <option value="$PROJECT_DIR$/003Bargain.html" />
-        <option value="$PROJECT_DIR$/lang/words.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/table.css" />
         <option value="$PROJECT_DIR$/002start.html" />
-        <option value="$PROJECT_DIR$/003enterMobile.html" />
         <option value="$PROJECT_DIR$/004enterClientInfo.html" />
         <option value="$PROJECT_DIR$/js/productsFinder.js" />
         <option value="$PROJECT_DIR$/001findProduct.html" />
@@ -68,6 +65,10 @@
         <option value="$PROJECT_DIR$/002startBargain.html" />
         <option value="$PROJECT_DIR$/005thankYou.html" />
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/003enterMobile.html" />
+        <option value="$PROJECT_DIR$/004thankYou.html" />
+        <option value="$PROJECT_DIR$/lang/words.js" />
       </list>
     </option>
   </component>
@@ -126,6 +127,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="fastvends" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="dbm_new" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fastvends" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -458,12 +473,12 @@
       <workItem from="1422090209667" duration="166000" />
       <workItem from="1422363005340" duration="181000" />
       <workItem from="1422474263079" duration="9932000" />
-      <workItem from="1422484760657" duration="1777000" />
+      <workItem from="1422484760657" duration="2308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="239367000" />
+    <option name="totallyTimeSpent" value="239898000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
@@ -748,14 +763,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91525424" vertical-offset="0" max-vertical-offset="945">
-          <caret line="22" column="14" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/translator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31532848" vertical-offset="810" max-vertical-offset="3483">
@@ -801,13 +808,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lang/words.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4537246" vertical-offset="2607" max-vertical-offset="5778">
-          <caret line="104" column="15" selection-start-line="104" selection-start-column="15" selection-end-line="104" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aslo/004enterClientInfo.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09015025" vertical-offset="0" max-vertical-offset="1755">
@@ -815,14 +815,6 @@
           <folding>
             <element signature="tag#div#1;tag#div#0;tag#div#0;tag#div#0;tag#section#0;tag#body#0;tag#html#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/003enterMobile.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13522537" vertical-offset="0" max-vertical-offset="2268">
-          <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -873,22 +865,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/001findProduct.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.5277777" vertical-offset="746" max-vertical-offset="2322">
-          <caret line="35" column="39" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/004thankYou.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.13522537" vertical-offset="0" max-vertical-offset="1107">
-          <caret line="3" column="43" selection-start-line="3" selection-start-column="41" selection-end-line="3" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/002startBargain.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.90984976" vertical-offset="1561" max-vertical-offset="2592">
@@ -905,6 +881,46 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7379421" vertical-offset="1188" max-vertical-offset="28080">
           <caret line="61" column="21" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/001findProduct.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33222038" vertical-offset="746" max-vertical-offset="2322">
+          <caret line="35" column="12" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lang/words.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37480316" vertical-offset="3191" max-vertical-offset="5886">
+          <caret line="127" column="34" selection-start-line="127" selection-start-column="34" selection-end-line="127" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/004thankYou.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7295492" vertical-offset="238" max-vertical-offset="1107">
+          <caret line="25" column="22" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/003enterMobile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6310518" vertical-offset="540" max-vertical-offset="2268">
+          <caret line="34" column="44" selection-start-line="34" selection-start-column="44" selection-end-line="34" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6761269" vertical-offset="0" max-vertical-offset="945">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
           <folding />
         </state>
       </provider>
