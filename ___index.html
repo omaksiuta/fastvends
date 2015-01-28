@@ -1,0 +1,282 @@
+﻿<!DOCTYPE HTML>
+<!--http://www.cssterm.com/css-menus/horizontal-css-menu/simple-css-menu-->
+<!--http://css-tricks.com/video-screencasts/page/6/-->
+<!--http://www.designonstop.com/webdesign/trends/20-osnovnyx-trendov-veb-dizajna-v-2014-godu-po-versii-designonstop.htm-->
+<!--https://www.travelfusion.com/corporate/page/terms-conditions-->
+<!--https://www.travelfusion.com/Flight-->
+<!--http://activatemedia.co.uk/contact.html-->
+<!--http://www.antsmagazine.com/web-development/50-cool-text-effects-in-css3/-->
+<!--http://medialoot.com/blog/how-to-create-a-responsive-navigation-menu-using-only-css/-->
+
+
+<!--http://500.co/events/-->
+<!--http://startupweekend.org/-->
+<!--http://color.romanuke.com/category/zelenyiy/-->
+
+<html>
+<head>
+    <title>Fast Vending Solutions</title>
+    <!-- begin meta -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <meta name="description" content="Welcome to new shopping generation.">
+    <meta name="keywords" content="dbm, discount and bargaining machine, gbo, get best offer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Oleksandr Maksiuta">
+    <meta http-equiv="refresh" content="0.2;url=000home.html">
+    <!-- begin CSS -->
+    <link href="css/styles.css" type="text/css" rel="stylesheet"/>
+    <link href="css/table.css" type="text/css" rel="stylesheet"/>
+    <link href="css/index.css" type="text/css" rel="stylesheet"/>
+    <link href="css/menu.css" type="text/css" rel="stylesheet"/>
+    <!-- begin JS -->
+    <script src="js/jquery.js" type="text/javascript"></script>
+    <script src="js/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/translator.js" type="text/javascript"></script>
+    <script src="js/jquery.arctext.js" type="text/javascript"></script>
+    <script src="lang/words.js" type="text/javascript"></script>
+    <script src="js/spin.min.js" type="text/javascript"></script>
+    <script src="js/productsFinder.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(function () {
+            storeDefaultParams();
+            translate(['lang_abbr_rus', 'lang_abbr_eng',
+                'menuAbout', 'menuProducts', 'menuPricing',
+                'menuEquipment', 'menuBehaviour', 'menuSecurity', 'menuContactUs',
+                'sectionAbout', 'sectionProducts', 'sectionPricing', 'sectionEquipment',
+                'sectionBehaviour', 'sectionSecurity', 'sectionContactUs']);
+            //////////////////////////////////////////////
+            //Smooth Scrolling
+            $('a[href*=#]:not([href=#])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html,body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+
+
+            $("#popupGetOneFree").dialog({//Product Demo Popups//http://api.jquerymobile.com/popup/#method-destroy
+                height: 800,
+                width: 600,
+                modal: true,
+                resizable: false,
+                dialogClass: 'no-close success-dialog',
+                autoOpen: false,
+                closeText: "X",
+                show: {
+                    duration: 1000
+                },
+                hide: {
+                    effect: "destroy",
+                    duration: 1000
+                }
+
+            });
+            $(".product_big_logo").click(function () {
+                $("#popupGetOneFree").dialog("open");
+            });
+        });
+
+
+    </script>
+    <style>
+        #popupGetOneFree {
+            border: 25px solid #455A64;
+            background-color: white;
+            /*min-width: 400px;*/
+            min-height: 1200px;
+            /*text-align: center;*/
+        }
+
+         #iframe_get_discount {
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+<!--<iframe width="420" height="315" src="//www.youtube.com/embed/V8C2yjZMh-I" frameborder="0" allowfullscreen></iframe>-->
+<header>
+    <div class="table" style="width: 100%;">
+        <div class="tableRow">
+            <div class="tableCell middleCenterContainer">
+                <div id="switchLanguage">
+                    <button id="lang_abbr_eng"
+                            onclick="refreshIFramePage('iframe_get_discount'); saveToSessionStorage('lang', 'en'); location.reload(true)">
+                    </button>
+                    |
+                    <button id="lang_abbr_rus"
+                            onclick="refreshIFramePage('iframe_get_discount'); saveToSessionStorage('lang', 'ru'); location.reload(true)">
+                    </button>
+                </div>
+                <label for="show-menu" class="show-menu"><span>Menu &#9776;</span></label>
+                <input type="checkbox" id="show-menu" role="button">
+                <ul id="menu">
+                    <li><a id="menu_about" href="#section_about"><span id="menuAbout"></span></a></li>
+                    <li><a id="menu_products" href="#section_products"><span id="menuProducts"></span></a></li>
+                    <li><a id="menu_pricing" href="#section_pricing"><span id="menuPricing"></span></a></li>
+                    <li><a id="menu_equipment" href="#section_equipment"><span id="menuEquipment"></span></a></li>
+                    <li><a id="menu_behaviour" href="#section_behaviour"><span id="menuBehaviour"></span></a></li>
+                    <li><a id="menu_security" href="#section_security"><span id="menuSecurity"></span></a></li>
+                    <li><a id="menu_contacts" href="#section_contacts"><span id="menuContactUs"></span></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<section id="about" class="middleCenterContainer">
+    <div id="section_about" class="section_name"><span id="sectionAbout"></span></div>
+        <span id="aboutText">
+            As people may hesitate to bargain verbally but desire to buy products cheaper.
+            <br>And Shop Owner is ready to sell products with various discounts while it is profitable.
+            <br>We have established digital fast vending solutions with a passion to make life easier.
+        </span><br>
+    <img id="logoImage" src="images/happyShopper.jpg" alt="Happy Shopper"/>
+</section>
+
+<section id="sloganAfterAbout" class="slogan">
+    Fast Vending Solutions
+</section>
+
+<section id="products">
+    <div id="section_products" class="section_name"><span id="sectionProducts"></span></div>
+    <div id="bannerGetDiscount" class="product_big_logo">
+        <span>Get Discount</span>
+    </div>
+    <div id="bannerBargain" class="product_big_logo">
+        <span>Bargain</span>
+    </div>
+    <div id="bannerGetOneFree" class="product_big_logo">
+        <span>Get One Free</span>
+    </div>
+</section>
+
+<section id="sloganAfterProducts" class="slogan">
+    Developed to encrease shopping value
+</section>
+
+<section id="pricing">
+    <div id="section_pricing" class="section_name"><span id="sectionPricing"></span></div>
+
+    <div id="priceName"><span>90 Days trial</span></div>
+    <div class="price_graph">
+        <div id="priceCost" style="width: 100%"><span>Try free</span></div>
+    </div>
+
+    <div id="priceName"><span>3-6 Month</span></div>
+    <div class="price_graph">
+        <div id="priceCost" style="width: 89%">$89<span>  / Month</span></div>
+    </div>
+
+    <div id="priceName"><span>7-12 Month</span></div>
+    <div class="price_graph">
+        <div id="priceCost" style="width: 84%">$84<span> / Month</span></div>
+    </div>
+
+    <div id="priceName"><span>12+ Month</span></div>
+    <div class="price_graph">
+        <div id="priceCost" style="width: 79%">$79<span> / Month</span></div>
+    </div>
+</section>
+
+<section id="sloganAfterPricing" class="slogan">
+    The main group of customers are closing stores
+</section>
+
+<section id="equipment">
+    <div id="section_equipment" class="section_name"><span id="sectionEquipment"></span></div>
+        <span id="equipmentText">
+        It is just a touchscreen tablet computer with software <br/> which interacts shop's database via WiFi <br/> and notifies clients via SMS
+        </span>
+
+    <p>
+
+    <div style="display: inline-block;">
+        <img id="wifiImage" src="images/wifi-logo-transparent-png.png" alt="WiFi"/>
+        <img id="tabletImage" src="images/img-tablet.png" alt="Tablet"/>
+        <img id="smsImage" src="images/sms_large.png" alt="Sms"/>
+    </div>
+</section>
+
+<section id="sloganAfterEquipment" class="slogan">
+    Simple and user friendly
+</section>
+
+<section id="behaviour">
+    <div id="section_behaviour" class="section_name"><span id="sectionBehaviour"></span></div>
+        <span id="behaviourText">
+        When a client in the shop and finds the product which could be bought
+        <br/>And no discount has been announced in the shop for this product
+        <br/>Then a client may hesitate to ask sales assistant about the discount
+        <br/>When a client goes to fast vending solution inside the shop
+        <br/>And finds the likely product by code
+        <br/>Then a client receives special offer to buy cheaper
+        </span>
+</section>
+
+<section id="sloganAfterBehaviour" class="slogan">
+    Imagine the potential of fast vending solutions
+</section>
+
+<section id="security">
+    <div id="section_security" class="section_name"><span id="sectionSecurity"></span></div>
+        <span id="securityText">
+        Technical specialist connects fast vending solution to shop's database inside shop
+        <br/>Shop's manager submits range of minimum and maximum prices
+        <br/>Fast vending solution generates client proposals accordingly
+        <br/>We use only read access to shop database and no connections between other shops
+        <br/>Clients submit their mobile number to buy cheaper
+        <br/>Solutions forecasts best offer strategies for the feature deals
+        </span>
+</section>
+
+<section id="sloganAfterSecurity" class="slogan">
+    Increase sales experience with us
+</section>
+
+<section id="contacts">
+    <div id="section_contacts" class="section_name"><span id="sectionContactUs"></span></div>
+        <span id="contactsText">
+            Tel: +38(093)988-8338 | Email: fastvends@gmail.com
+        </span>
+
+    <br/><br/><br/>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2540.5580052078494!2d30.410282999999996!3d50.449333!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc6a2db159a7%3A0xb5a28726af0a1390!2z0LLRg9C7LiDQoNCw0LTQuNGJ0LXQstCwLCAxMC8xNCwg0JrQuNGX0LIsINC80ZbRgdGC0L4g0JrQuNGX0LI!5e0!3m2!1sru!2sua!4v1415911156587"
+            width="100%" height="360px" frameborder="0"></iframe>
+    <br/><br/><br/>
+
+    <div id="social-media-icons" class="middleCenterContainer">
+        <a href="https://twitter.com/" target="_blank"><img class="socialImgLink"
+                                                            src="images/Twitter-round.png"/></a>
+
+        <a href="http://pinterest.com/" target="_blank"><img class="socialImgLink" src="images/Pinterest-round.png"></a>
+
+        <a href="http://www.linkedin.com/" target="_blank"><img class="socialImgLink"
+                                                                src="images/Linkedin-round.png"></a>
+
+        <a href="https://www.facebook.com/" target="_blank"><img class="socialImgLink"
+                                                                 src="images/Facebook-Round.png"></a>
+    </div>
+</section>
+<footer>
+    <div id="copyright">
+        <br/><br/><br/>
+        Copyright © Fast Vending Solutions | All rights reserved | 2014-2015
+    </div>
+</footer>
+
+
+<div id="popupGetOneFree">
+    <iframe id="iframe_get_discount" src="index.html" frameborder="0"></iframe>
+</div>
+
+</body>
+</html>

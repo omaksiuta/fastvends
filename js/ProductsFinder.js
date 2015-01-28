@@ -48,7 +48,7 @@ function storeDefaultParams() {
         saveToSessionStorage("page", "home.html");
     }
     if (typeof (sessionStorage.lang) == "undefined") {
-        saveToSessionStorage("lang", "ru");
+        saveToSessionStorage("lang", "en");
     }
     if (typeof (sessionStorage.priceOriginal) == "undefined") {
         saveToSessionStorage("priceOriginal", "0");

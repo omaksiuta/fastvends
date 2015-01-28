@@ -58,11 +58,8 @@
                 <span class="offerPriceFontStyle" id="product_price_offer"></span>
                 <span class="offerPriceFontStyle" id="finalShopPrice"></span>
                 <span class="offerPriceFontStyle" id="currencyCodeNewPrice"></span>
-                <br>
-
             </div>
-
-            <div id="clientOffer">
+            <div class="clientInputArea">
                 <div id="clientPriceTxt">101</div>
                 <div id="keypad">
                     <button onclick="keyPadInput('clientPriceTxt', '1','16')">1</button>
@@ -81,15 +78,7 @@
                     <button onclick="keyPadInput('clientPriceTxt', '0','16')">0</button>
                     <button onclick="keyPadInput('clientPriceTxt', 'deleteEndRightSymbol','')"><</button>
                 </div>
-                <button type="button" id="btnSuggestNewPrice"
-                        onclick="validateSuggestedPrice(
-                    getFromSessionStorage('minShopPrice'),
-                    parseFloat(document.getElementById('finalShopPrice').innerText),
-                    parseFloat(document.getElementById('clientPriceTxt').value),
-                    getFromSessionStorage('countOfItemsToGetOneFree'))"></button>
             </div>
-
-
         </div>
         <div class="tableCell middleCenterContainer halfSide">
             <div>
@@ -124,13 +113,19 @@
     <div class="tableRow">
         <div class="tableCell topLeftContainer halfSide">
             <button id="btnHome"
-                    onclick="redirectToPage('000home.html');">
+                    onclick="redirectToPage('index.html');">
             </button>
             <button id="btnBack"
                     onclick="redirectToPage('001findProduct.html');">
             </button>
         </div>
         <div class="tableCell topRightContainer halfSide">
+            <button type="button" id="btnSuggestNewPrice"
+                    onclick="validateSuggestedPrice(
+                    getFromSessionStorage('minShopPrice'),
+                    parseFloat(document.getElementById('finalShopPrice').innerText),
+                    parseFloat(document.getElementById('clientPriceTxt').value),
+                    getFromSessionStorage('countOfItemsToGetOneFree'))"></button>
             <button type="button" id="btnBuyNow"
                     onclick="saveToSessionStorage('priceFinal', document.getElementById('finalShopPrice').innerText);
                                 redirectToPage('003enterMobile.html');">

@@ -30,23 +30,28 @@ body {
     height: 100%;
 }
 
-#btnHome:hover, #btnBack:hover {
+.clientInputArea
+{
+    display: inline-block;
+}
+
+#btnHome:hover, #btnBack:hover,#btnSuggestNewPrice:hover {
     color: yellow;
     /*border: 5px solid #700D30;*/
 }
 
-#btnHome, #btnBack {
+#btnHome, #btnBack,#btnSuggestNewPrice {
     color: #700D30;
     /*border: 5px solid #700D30;*/
 }
 
-#btnFindProductById, #btnSubmitCellPhoneNumber, #btnSuggestNewPrice, #btnUseOffer, #btnBuyNow {
+#btnFindProductById, #btnSubmitCellPhoneNumber,  #btnUseOffer, #btnBuyNow {
     background-color: #700D30;
     color: yellow;
     /*border: 5px solid #700D30;*/
 }
 
-#btnFindProductById:hover, #btnSubmitCellPhoneNumber:hover, #btnSuggestNewPrice:hover, #btnUseOffer:hover, #btnBuyNow:hover {
+#btnFindProductById:hover, #btnSubmitCellPhoneNumber:hover, #btnUseOffer:hover, #btnBuyNow:hover {
     color: #700D30;
     background-color: yellow;
 }

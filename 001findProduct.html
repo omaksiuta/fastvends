@@ -32,8 +32,8 @@
 
 <section id="spinnerPlace" class="table">
     <div class="tableRow">
-        <div class="tableCell middleLeftContainer halfSide">
-            <div>
+        <div class="tableCell middleCenterContainer halfSide">
+            <div class="clientInputArea">
                 <div id="txtProductCode">0000912</div>
                 <div id="keypad">
                     <button onclick="keyPadInput('txtProductCode', '1','16')">1</button>
@@ -64,13 +64,12 @@
     <div class="tableRow">
         <div class="tableCell topLeftContainer halfSide">
             <button id="btnHome"
-                    onclick="redirectToPage('000home.html');">
+                    onclick="redirectToPage('index.html');">
             </button>
         </div>
         <div class="tableCell topRightContainer halfSide">
             <button id="btnFindProductById"
                     onclick="runSpinnerWithRedirect('spinnerPlace','002startBargain.html');">
-                <!--onclick="runSpinnerWithRedirect('spinnerPlace','002startBargain.html');">-->
             </button>
         </div>
     </div>
