@@ -32,9 +32,9 @@
 
 <section id="spinnerPlace" class="table">
     <div class="tableRow">
-        <div class="tableCell middleCenterContainer">
-            <div id="txtProductCode">0000912</div>
 
+        <div class="tableCell middleLeftContainer">
+            <div id="txtProductCode">0000912</div>
             <div id="keypad" class=" middleCenterContainer">
                 <button onclick="keyPadInput('txtProductCode', '1','16')">1</button>
                 <button onclick="keyPadInput('txtProductCode', '2','16')">2</button>
@@ -53,6 +53,9 @@
                 <button onclick="keyPadInput('txtProductCode', 'deleteEndRightSymbol','')"><</button>
             </div>
         </div>
+        <div class="tableCell middleRightContainer">
+            <img id="imgScanTheProduct" src="images/scanTheProduct.jpg"/>
+        </div>
     </div>
 </section>
 
@@ -65,7 +68,8 @@
         </div>
         <div class="tableCell topRightContainer">
             <button id="btnFindProductById"
-                    onclick="runSpinnerWithRedirect('spinnerPlace','002start.html');">
+                    onclick="runSpinnerWithRedirect('spinnerPlace','002startBargain.html');">
+                    <!--onclick="runSpinnerWithRedirect('spinnerPlace','002startBargain.html');">-->
             </button>
         </div>
     </div>
