@@ -125,7 +125,7 @@ var translations = {
         "ru": "Смс сообщение с информацией о скидке отправлено. "
     },
     "info_enjoy_shopping": {
-        "en": "Enjoy your shopping!",
+        "en": "Enjoy shopping!",
         "ru": "Приятных покупок!"
     },
     "info_thank_you": {

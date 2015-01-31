@@ -81,6 +81,7 @@ function validateSuggestedPrice(minShopPrice, newShopPrice, clientPrice, countOf
         runSpinnerWithRedirect('spinnerPlace', '003enterMobile.html');
     }
     else {
+        runSpinnerWithNothing('spinnerPlace');
         var newOfferPrice = generateNewShopPrice(minShopPrice, newShopPrice, clientPrice, countOfItemsToGetOneFree);
         document.getElementById('finalShopPrice').innerText = newOfferPrice.toFixed(2);
         saveToSessionStorage('priceFinal', newOfferPrice);

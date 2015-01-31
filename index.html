@@ -16,17 +16,17 @@
             translate(['get_best_offer','lang_abbr_eng','lang_abbr_rus']);
             ">
 <div id="homePage" class="table"
-     onclick="redirectToPage('001findProduct.html');">
+     onclick="runSpinnerWithRedirect('get_best_offer','001findProduct.html');">
     <div class="tableRow">
         <div class="tableCell middleCenterContainer">
 
             <span id="get_best_offer"></span>
             <br>
             <button id="lang_abbr_eng"
-                    onclick="saveToSessionStorage('lang', 'en'); window.location.reload(true)">
+                    onclick="saveToSessionStorage('lang', 'en'); runSpinnerWithNothing('get_best_offer'); window.location.reload(true)">
             </button>
             <button id="lang_abbr_rus"
-                    onclick="saveToSessionStorage('lang', 'ru'); window.location.reload(true)">
+                    onclick="saveToSessionStorage('lang', 'ru'); runSpinnerWithNothing('get_best_offer');window.location.reload(true)">
             </button>
 
         </div>

@@ -2,6 +2,8 @@
 
 body {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     min-width: 800px;
     max-width: 1024px;
@@ -9,16 +11,16 @@ body {
     border: 5px solid yellow;
 }
 
-#btn_lang_eng, #btn_lang_rus {
-    font-size: 150%;
-    width: 50px;
+#lang_abbr_eng, #lang_abbr_rus {
+    /*font-size: 100%;*/
+    width: 100px;
     height: 50px;
     text-align: center;
     line-height: 25px;
-    color: whitesmoke;
+    /*color: whitesmoke;*/
     border: 0px;
-    background-color: #ffffff;
-    /*font-weight: bold;*/
+    /*background-color: #ffffff;*/
+    font-weight: bold;
     text-transform: uppercase;
 }
 

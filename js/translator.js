@@ -104,6 +104,15 @@ var opts = {
     top: '50%', // Top position relative to parent
     left: '50%' // Left position relative to parent
 };
+
+function runSpinnerWithNothing(elementId) {
+    var target = document.getElementById(elementId);
+    var spinner = new Spinner(opts).spin(target);
+    setTimeout(function () {
+        spinner.stop();
+    }, 500);
+};
+
 function runSpinnerWithPageReload(elementId) {
     var target = document.getElementById(elementId);
     var spinner = new Spinner(opts).spin(target);
