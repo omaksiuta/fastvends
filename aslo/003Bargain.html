@@ -16,14 +16,14 @@
 
 
     <!--<script type="text/javascript">-->
-    <!--function setProductInfo() {-->
+    <!--function setProductInfoForBargain() {-->
     <!--var product = getFromSessionStorage('product');-->
 
     <!--var newShopPrice = document.getElementById('finalShopPrice').innerText;-->
     <!--if (newShopPrice.length == 0) {-->
     <!--document.getElementById('finalShopPrice').innerText = getFromSessionStorage('originalShopPrice');-->
     <!--}-->
-    <!--document.getElementById('currencyCodeNewPrice').innerText = getFromSessionStorage('currencyCode');-->
+    <!--document.getElementById('currencyCodeUserPrice').innerText = getFromSessionStorage('currencyCode');-->
     <!--}-->
 
     <!--function validateSuggestedPrice(minShopPrice, newShopPrice, clientPrice, countOfItemsToGetOneFree) {-->
@@ -35,7 +35,7 @@
     <!--else {-->
     <!--var newOfferPrice = generateNewShopPrice(minShopPrice, newShopPrice, clientPrice, countOfItemsToGetOneFree);-->
     <!--document.getElementById('finalShopPrice').innerText = newOfferPrice.toFixed(2);-->
-    <!--document.getElementById('clientPriceTxt').value = "";-->
+    <!--document.getElementById('clientInputPriceTxt').value = "";-->
     <!--saveToSessionStorage('priceFinal', newOfferPrice);-->
     <!--//alert("We've just provided Best Offer. \nClick [Buy Now!] to agree or suggest your price!");-->
     <!--}-->
@@ -46,7 +46,7 @@
 
 <!--///////////////-->
 <body onload="saveToSessionStorage('page', '003Bargain.html');
-            setProductInfo();
+            setProductInfoForBargain();
             translate(['btnBuyNow','product_price_offer', 'suggest_new_price',
                        'bargain_header', 'btnHome', 'btnBack',
                         'btnSuggestNewPrice', 'finalShopPrice']);">
@@ -67,37 +67,37 @@
 
             <span class="offerPriceFontStyle" id="product_price_offer"></span>
             <span class="offerPriceFontStyle" id="finalShopPrice"></span>
-            <span class="offerPriceFontStyle" id="currencyCodeNewPrice"></span>
+            <span class="offerPriceFontStyle" id="currencyCodeUserPrice"></span>
             <button type="button" id="btnBuyNow"
                     onclick="saveToSessionStorage('priceFinal', document.getElementById('finalShopPrice').innerText);
                                 redirectToPage('004enterClientInfo.html');">
             </button>
 
 
-            <div id="clientPriceTxt">199</div>
+            <div id="clientInputPriceTxt">199</div>
 
             <div id="keypad" class=" middleCenterContainer">
-                <button onclick="keyPadInput('clientPriceTxt', '1','16')">1</button>
-                <button onclick="keyPadInput('clientPriceTxt', '2','16')">2</button>
-                <button onclick="keyPadInput('clientPriceTxt', '3','16')">3</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '1','16')">1</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '2','16')">2</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '3','16')">3</button>
                 <br>
-                <button onclick="keyPadInput('clientPriceTxt', '4','16')">4</button>
-                <button onclick="keyPadInput('clientPriceTxt', '5','16')">5</button>
-                <button onclick="keyPadInput('clientPriceTxt', '6','16')">6</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '4','16')">4</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '5','16')">5</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '6','16')">6</button>
                 <br>
-                <button onclick="keyPadInput('clientPriceTxt', '7','16')">7</button>
-                <button onclick="keyPadInput('clientPriceTxt', '8','16')">8</button>
-                <button onclick="keyPadInput('clientPriceTxt', '9','16')">9</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '7','16')">7</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '8','16')">8</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '9','16')">9</button>
                 <br>
-                <button onclick="keyPadInput('clientPriceTxt', '.','16')">.</button>
-                <button onclick="keyPadInput('clientPriceTxt', '0','16')">0</button>
-                <button onclick="keyPadInput('clientPriceTxt', 'deleteEndRightSymbol','')"><</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '.','16')">.</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', '0','16')">0</button>
+                <button onclick="keyPadInput('clientInputPriceTxt', 'deleteEndRightSymbol','')"><</button>
             </div>
             <button type="button" id="btnSuggestNewPrice"
                     onclick="validateSuggestedPrice(
                     getFromSessionStorage('minShopPrice'),
                     parseFloat(document.getElementById('finalShopPrice').innerText),
-                    parseFloat(document.getElementById('clientPriceTxt').value),
+                    parseFloat(document.getElementById('clientInputPriceTxt').value),
                     getFromSessionStorage('countOfItemsToGetOneFree'))"></button>
         </div>
     </div>

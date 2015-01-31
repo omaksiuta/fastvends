@@ -4,9 +4,8 @@
         productName:"Cocktail Party Short Slim Dress",
         productImageUrl: "images/productForDemo.JPG",
         currencyCode: "UAH",
-        originalShopPrice: 200,
-        finalShopPrice: 192.50,
-        minShopPrice: 180,
+        originalShopPrice: 200.00,
+        minShopPrice: 170.35,
         countOfItemsToGetOneFree: 10
     };
     return product;
@@ -22,16 +21,16 @@ function saveToSessionStorage(key, value) {
         sessionStorage.productName = value.productName;
         sessionStorage.productImageUrl = value.productImageUrl;
         sessionStorage.currencyCode = value.currencyCode;
-        sessionStorage.originalShopPrice = value.originalShopPrice;
-        sessionStorage.minShopPrice = value.minShopPrice;
+        sessionStorage.originalShopPrice = value.originalShopPrice.toFixed(2);
+        sessionStorage.minShopPrice = value.minShopPrice.toFixed(2);
         sessionStorage.countOfItemsToGetOneFree = value.countOfItemsToGetOneFree;
     }
     else if (stringContains(key, 'page')) {
         sessionStorage.page = value;
     }
-    else if (stringContains(key, 'finalShopPrice')) {
-        sessionStorage.finalShopPrice = value;
-    }
+//    else if (stringContains(key, 'finalShopPrice')) {
+//        sessionStorage.finalShopPrice = value;
+//    }
     else { }
 }
 

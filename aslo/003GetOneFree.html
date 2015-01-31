@@ -13,7 +13,7 @@
     <script src="../lang/words.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-        function setProductInfo() {
+        function setProductInfoForBargain() {
             document.getElementById("productImgMain").src = getFromSessionStorage('productImageUrl');
         }
 
@@ -23,7 +23,7 @@
 
             var currencyCode = getFromSessionStorage('currencyCode');
             document.getElementById('currencyCodeOriginalPrice').innerText = currencyCode;
-            document.getElementById('currencyCodeNewPrice').innerText = currencyCode;
+            document.getElementById('currencyCodeUserPrice').innerText = currencyCode;
             document.getElementById('currencyCodeDiscount').innerText = currencyCode;
 
             document.getElementById('originalShopPrice').innerText = getFromSessionStorage('originalShopPrice');
@@ -44,7 +44,7 @@
     </script>
 </head>
 <body onload="saveToSessionStorage('page', '003GetDiscount.html');
-            setProductInfo();
+            setProductInfoForBargain();
             autoGetDiscount();
             translate(['product_price_normal','product_price_offer',
                        'discount_header', 'btnHome', 'btnGetDiscount',
@@ -96,7 +96,7 @@
                                     <div>
                                         <span class="offerPriceFontStyle" id="product_price_offer"></span>:
                                         <span class="offerPriceFontStyle" id="finalShopPrice"></span>
-                                        <span class="offerPriceFontStyle" id="currencyCodeNewPrice"></span>
+                                        <span class="offerPriceFontStyle" id="currencyCodeUserPrice"></span>
                                     </div>
                                 </div>
 

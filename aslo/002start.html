@@ -12,7 +12,7 @@
     <script src="../js/productsFinder.js" type="text/javascript"></script>
     <script src="../lang/words.js" type="text/javascript"></script>
     <script type="text/javascript">
-        function setProductInfo() {
+        function setProductInfoForBargain() {
             document.getElementById('productIdLbl').innerText = getFromSessionStorage('productId');
             document.getElementById('productName').innerText = getFromSessionStorage('productName');
 
@@ -25,7 +25,7 @@
             document.getElementById('currencyCodeOriginalPrice').innerText = currencyCode;
 
             document.getElementById('originalShopPrice').innerText = getFromSessionStorage('originalShopPrice');
-            ////
+
             saveToSessionStorage('finalShopPrice', getFromSessionStorage('originalShopPrice'));
         }
     </script>
@@ -33,7 +33,7 @@
 <body onload="
         $('#shopPriceHiddenInfo').show();
         saveToSessionStorage('page', '002start.html');
-        setProductInfo();
+        setProductInfoForBargain();
         translate(['product_price_normal','choose_way', 'btnHome','btnBack', 'btnForward',
         'product_code','min_Shop_Price',
         'btnGetDiscount', 'btnGetOneFree', 'btnBargain', 'btnGetPresent']);

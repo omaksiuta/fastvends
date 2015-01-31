@@ -109,8 +109,8 @@ var translations = {
         "ru": "Предложить"
     },
     "bargain_header": {
-        "en": "Bargain!",
-        "ru": "Торгуемся!"
+        "en": "Bargain",
+        "ru": "Торгуемся"
     },
     "discount_header": {
         "en": "Discount!",
@@ -121,7 +121,7 @@ var translations = {
         "ru": "Введите"
     },
     "info_sent_discount": {
-        "en": "Sms with discount has been sent to your cell phone.",
+        "en": "Sms with special offer has been sent.",
         "ru": "Смс сообщение с информацией о скидке отправлено. "
     },
     "info_enjoy_shopping": {
