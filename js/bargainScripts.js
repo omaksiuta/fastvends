@@ -83,8 +83,8 @@ function validateSuggestedPrice(minShopPrice, newShopPrice, clientPrice, countOf
     else {
         var newOfferPrice = generateNewShopPrice(minShopPrice, newShopPrice, clientPrice, countOfItemsToGetOneFree);
         document.getElementById('finalShopPrice').innerText = newOfferPrice.toFixed(2);
-        document.getElementById('clientInputPriceTxt').value = "";
         saveToSessionStorage('priceFinal', newOfferPrice);
         //alert("We've just provided Best Offer. \nClick [Buy Now!] to agree or suggest your price!");
     }
+    document.getElementById('clientInputPrice').innerText = "";
 }
